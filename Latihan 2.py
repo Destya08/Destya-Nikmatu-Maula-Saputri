@@ -1,18 +1,19 @@
-class Praktikum :
-    def __init__(self, nama, nim, kelas) :
-        self.nama = nama
-        self.nim = nim
-        self.kelas = kelas
+class Person(object) :
+    def __init__(self, name) :
+        self.name = name
+
+    def getName(self) :
+        return self.name
     
-    def tampilkan_kelas(self) :
-        print("Nama : " + self.nama)
-        print("NIM : " + self.nim)
-        print("Kelas : " + self.kelas)
+    def isEmployee(self) :
+        return False
+    
+class Employee(Person) :
+    def isEmployee(self) :
+        return True
+    
+emp = Person("Slamet")
+print(emp.getName(), emp.isEmployee())
 
-nama = input ("Masukkan Nama Mahasiswa : ")
-nim = input ("Masukkan NIM Mahasiswa : ")
-kelas = input ("Masukkan Kelas Praktikum Mahasiswa : ")
-
-prak = Praktikum(nama, nim, kelas)
-
-prak.tampilkan_kelas()
+emp = Employee("Santoso")
+print(emp.getName(), emp.isEmployee())
