@@ -1,0 +1,24 @@
+class Mahasiswa :
+    SARJANA, MASTER, DOKTOR = range(3)
+    jenjang = ("Sarjana", "Master", "Doktor")
+
+    def __init__(self, nama_depan, nama_belakang, nomor_id, jenjang) :
+        self.nama_depan = nama_depan
+        self.nama_belakang = nama_belakang
+        self.nomor_id = nomor_id
+        self.jenjang = jenjang
+        self.nama_matkul = []
+
+    def enrol (self,nama_matkul) :
+        self.nama_matkul.append(nama_matkul)
+
+    def tampilkan_mahasiswa(self) :
+        print("Nama Depan :  ",self.nama_depan)
+        print("Nama Belakang : ",self.nama_belakang)
+        print("Nomor ID : ",self.nomor_id)
+        print("Jenjang : ",Mahasiswa.jenjang[self.jenjang])
+        print("Nama Mata Kuliah : ",''.join(self.nama_matkul) if self.nama_matkul else 'Belum ada mata kuliah')
+
+bowo = Mahasiswa("Bowo", "Nugroho", "987654", Mahasiswa.SARJANA)
+bowo.enrol("Basis Data")
+bowo.tampilkan_mahasiswa()

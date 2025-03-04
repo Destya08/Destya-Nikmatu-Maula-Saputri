@@ -1,0 +1,13 @@
+class Pengajar :
+    def __init__(self) :
+        self.matkul_diajar = []
+
+    def mengajar (self, matkul_diajar) :
+        self.matkul_diajar.append(matkul_diajar)
+
+    def tampilkan_pengajar(self) :
+        print("Mata Kuliah Diajar : ",''.join(self.matkul_diajar) if self.matkul_diajar else 'Belum mengajar mata kuliah')
+
+matkul = Pengajar()
+matkul.mengajar("Pemrograman Berorientasi Objek")
+matkul.tampilkan_pengajar()

@@ -1,0 +1,13 @@
+class Pelajar :
+    def __init__(self) :
+        self.matkul = []
+
+    def enrol (self, matkul) :
+        self.matkul.append(matkul)
+
+    def tampilkan_pelajar(self) :
+        print("Mata Kuliah Pelajar : ",''.join(self.matkul) if self.matkul else 'Belum mengajar mata kuliah')
+
+mata_kuliah = Pelajar()
+mata_kuliah.enrol("Pemrograman Berorientasi Objek")
+mata_kuliah.tampilkan_pelajar()

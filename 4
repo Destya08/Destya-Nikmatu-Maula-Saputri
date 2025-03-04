@@ -1,0 +1,29 @@
+class Karyawan :
+    TETAP, TDK_TETAP = range(2)
+    status_karyawan = ("Tetap", "Tidak Tetap")
+
+    def __init__(self, nama_depan, nama_belakang, nomor_id, status_karyawan):
+        self.nama_depan = nama_depan
+        self.nama_belakang = nama_belakang
+        self.nomor_id = nomor_id
+        self.status_karyawan = status_karyawan
+    
+class Dosen(Karyawan) :
+    def __init__(self, nama_depan, nama_belakang, nomor_id, status_karyawan) :
+        super().__init__(nama_depan, nama_belakang, nomor_id, status_karyawan)
+        self.matkul_diajar = []
+
+    def mengajar(self,matkul_diajar) :
+        self.matkul_diajar.append(matkul_diajar)
+    
+    def tampilkan_dosen(self) :
+        print("Nama Depan : ",self.nama_depan)
+        print("Nama Belakang : ",self.nama_belakang)
+        print("Nomor ID : ",self.nomor_id)
+        print("Status Karyawan : ",Karyawan.status_karyawan[self.status_karyawan])
+        print("Mata Kuliah Diajar : ",''.join(self.matkul_diajar) if self.matkul_diajar else 'Belum mengajar mata kuliah')
+
+mahasiswa = Dosen("Destya", "Saputri", "534644", Karyawan.TETAP)
+mahasiswa.mengajar("Pemrograman Berorientasi Objek")
+mahasiswa.tampilkan_dosen()
+
