@@ -1,0 +1,21 @@
+class Lulus :
+    def ipk (self) :
+        print("IPK diatas 2.5")
+
+    def status(self) :
+        print("Mahasiswa dinyatakan LULUS dengan nilai yang memenuhi syarat.")
+
+class TidakLulus :
+    def ipk(self) :
+        print ("IPK dibawah 2.5")
+
+    def status(self):
+        print("Mahasiswa dinyatakan TIDAK LULUS karena nilai tidak memenuhi syarat.")
+
+mahasiswa1 = Lulus()
+mahasiswa2 = TidakLulus()
+
+print("Status Mahasiswa:")
+for mahasiswa in (mahasiswa1, mahasiswa2) :
+    mahasiswa.ipk()
+    mahasiswa.status()
