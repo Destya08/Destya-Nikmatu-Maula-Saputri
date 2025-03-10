@@ -1,0 +1,11 @@
+class Pembelian :
+    def __init__(self, pesanan) :
+        self.pesanan = pesanan
+
+    def __add__(self, other) :
+        return self.pesanan + other.pesanan
+
+pesanan1 = Pembelian(60)
+pesanan2 = Pembelian(10)
+
+print("Total pembelian pada 2 kali pemesanan adalah : ", pesanan1 + pesanan2)
