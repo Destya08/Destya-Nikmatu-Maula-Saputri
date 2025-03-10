@@ -1,0 +1,27 @@
+class Kelulusan:
+    def intro(self):
+        print("Terdapat 2 Jenis Stautus Kelulusan Siswa :")
+
+    def status(self):
+        print("Terdapat Mahasiswa Yang Lulus Maupun Tidak Lulus.")
+
+class Lulus(Kelulusan):
+    def status(self):
+        print("Mahasiswa Dinyatakan Lulus Karena IPK > 2.5")      
+
+class TidakLulus(Kelulusan):
+    def status(self):
+        print("Mahasiswa Dinyatakan Tidak Lulus Karena IPK < 2.5")
+
+kelulusan = Kelulusan()
+lulus = Lulus()
+tidak_lulus = TidakLulus()
+
+kelulusan.intro()
+kelulusan.status()
+
+lulus.intro()
+lulus.status()
+
+tidak_lulus.intro()
+tidak_lulus.status()
